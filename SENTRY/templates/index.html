@@ -33,14 +33,14 @@
 
               <ul id="tmMainNav" class="nav flex-column text-uppercase text-right tm-main-nav"> <!--SideBar-->
                 <li class="nav-item">
-                  <a href="#login" class="nav-link active">
+                  <a href="login" class="nav-link active">
                     <span class="d-inline-block mr-3">Login</span>
                     <span class="d-inline-block tm-white-rect"></span>
                   </a>
                 </li>
 
                 <li class="nav-item">
-                  <a href="#instant" class="nav-link">
+                  <a href="register" class="nav-link">
                     <span class="d-inline-block mr-3">Instant Ticket</span>
                     <span class="d-inline-block tm-white-rect"></span>
                   </a>
@@ -67,17 +67,20 @@
                         <h2 class="tm-section-title mb-5 text-uppercase tm-color-primary">Login to Your SENTRY Account</h2>
                         <p class="tm-color-gray">
                           <div class="tm-contact-form-wrap">
-                            <form action="" method="POST" class="tm-contact-form" id=>
+                            <form action="{{ url_for('login') }}" method="POST" class="tm-contact-form" id=>
                                 <div class="form-group">
-                                  <input type="text" id="contact_name" name="contact_name" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Your Name" required="" />
+                                  <input type="text" id="username" name="username" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Username" required="" />
                                 </div>
                                 <div class="form-group">
-                                  <input type="email" id="contact_email" name="contact_email" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Password" required="" />
+                                  <input type="password" id="password" name="password" class="form-control rounded-0 border-top-0 border-right-0 border-left-0" placeholder="Password" required="" />
+                                </div>
+                                <div>
+                                  <input type="submit" class="btn" value="Sign In"></br></br>
                                 </div>
                             </form>
                             
                           </div> 
-                          <button class="button" onclick="location.href='http://localhost:5000/user'" type="submit" form="form1" value="Submit">Submit</button> 
+                          
                         </p>
 
                         <p class="mb-0 tm-color-gray">
@@ -92,13 +95,6 @@
         </div>
       </div>
     </main>  
-
-    <script src="{{url_for('static', filename='jquery.min.js')}}"></script>
-    <script src="{{url_for('static', filename='jquery.singlePageNav.min.js')}}"></script>
-    <script src="{{url_for('static', filename='parallax.min.js')}}"></script>
-    <script src="{{url_for('static', filename='slick.min.js')}}"></script>
-    <script src="{{url_for('static', filename='jquery.magnific-popup.min.js')}}"></script>
-    <script src="{{url_for('static', filename='templatemo-scripts.js')}}"></script>
     
   </body>
 </html>

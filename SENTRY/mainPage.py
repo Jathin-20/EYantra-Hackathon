@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, request, redirect, url_for, session
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
@@ -33,7 +32,7 @@ def login():
 			session['id'] = account['id']
 			session['username'] = account['username']
 			msg = 'Logged in successfully !'
-			return render_template('index1.html', msg = msg)
+			return render_template('form.html', msg = msg)
 		else:
 			msg = 'Incorrect username / password !'
 	return render_template('login.html', msg = msg)
