@@ -10,9 +10,9 @@ def home():
 def Welcome_name(name):
   return 'Welcome' + name + '!'
   
-@app.route("/about")
-def John():
-  return "about"
+@app.route("/user")
+def user():
+  return render_template("index1.html")
 
 if __name__ == "__main__":
   app.run(host='0.0.0.0')
