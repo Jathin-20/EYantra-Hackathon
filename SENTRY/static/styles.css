@@ -1,0 +1,73 @@
+/* Store this code in 'style.css' file inside the 'static' folder*/
+
+			.header{
+				padding: 1rem;
+				width: 50%;
+				height: 100px;
+				border-radius: 1rem;
+				text-align: center;
+				font-size: 1.4rem;
+				font-family: Open Sans Arial, Helvetica, sans-serif;
+				background-color: #a4c7d8;
+			}
+
+			.cred{
+				color: rgb(25, 25, 85);
+				font-size: 1.5rem;
+				font-family: Open Sans Arial, Helvetica, sans-serif;
+			}
+			
+
+			.border{
+				padding: 2rem 1rem;
+				width: 50%;
+				height: 80%;
+				border: 1px solid #bddfeb;
+				box-shadow: 2rem rgb(54, 52, 52);
+				border-radius: 1rem;
+				background-color: #bddfeb;
+			}
+
+			.btn {
+				padding: 0.5rem;
+				width: 50%;
+				height: 4rem;
+				background-color: #236B8E;
+				color: #FFFFFF;
+				font-size: 1.5rem;
+				font-style: inherit;
+				font-weight: bold;
+				border-radius: 1rem;
+				cursor: pointer;
+			}
+
+			.btn:hover{
+				background-color: #3881a5;
+				color: #FFFFFF;
+			}
+
+			.textbox{
+				padding: 10px 40px;
+			}
+				
+			::placeholder {
+				color: #6d6a6a;
+				opacity: 1;
+				font-style: inherit;
+				font-family: Open Sans Arial, Helvetica, sans-serif;
+				font-size: 1rem;
+			}
+
+			.word{
+				color: #FFFFFF;
+				font-style: inherit;
+				font-weight: bold;
+			}
+
+			.bottom{
+				color: #236B8E;
+				font-style: inherit;
+				font-family: Open Sans Arial, Helvetica, sans-serif;
+				font-weight: bold;
+				font-size: 1rem;
+			}

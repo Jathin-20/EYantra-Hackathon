@@ -80,8 +80,8 @@ a {
 }
 
 /*Our Additions */
-.btn {
-  background-color: #717271; /* Green */
+.button {
+  background-color: #4CAF50; /* Green */
   border: none;
   color: white;
   padding: 16px 32px;
@@ -240,6 +240,16 @@ a {
   justify-content: center;
 }
 
+
+
+
+
+
+
+
+
+
+
 .tm-contact-form-wrap {
   display: flex;
   align-items: center;
@@ -255,6 +265,37 @@ a {
   margin-bottom: 40px;
 }
 
+.tm-btn-primary {
+  color: #707172;
+  border-bottom: 1px solid #cdcecf;
+  padding: 10px 18px;
+  position: relative;
+}
+
+.tm-btn-primary:hover,
+.tm-btn-primary:active {
+  color: #fff;
+  background-color: #999;
+}
+
+.tm-btn-primary:after {
+  width: 100%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  background: #cdcecf;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.tm-btn-primary:hover:after,
+.tm-btn-primary:active:after {
+  height: 100%;
+}
 
 .form-control:focus {
   outline: none;
@@ -271,10 +312,18 @@ a {
     padding-right: 30px;
   }
 
+  .tm-social-link {
+    margin: 5px;
+  }
+
   .tm-section-wrap {
     width: 70%;
   }
 
+  .tm-img-wrap a {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .navbar-toggler {
@@ -299,6 +348,10 @@ a {
 
   .tm-main-nav {
     margin-bottom: 60px;
+  }
+
+  .tm-social-links {
+    margin-bottom: 30px;
   }
 
   footer p {
@@ -343,6 +396,16 @@ a {
     width: 100%;
   }
 
+  figure.effect-bubba h2 {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+
+  .tm-gallery-item figure p {
+    font-size: 63%;
+    padding: 0;
+    line-height: 1.5;
+  }
 }
 
 @media (max-width: 767px) {
