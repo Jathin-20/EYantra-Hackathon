@@ -1,49 +1,59 @@
 /* Store this code in 'style.css' file inside the 'static' folder*/
 
+			.contain {
+				background-color: #333;
+				padding-top: 0;
+			}
+
 			.header{
-				padding: 1rem;
+				padding: 1rem 1rem;
 				width: 50%;
-				height: 100px;
+				height: 4.5rem;
 				border-radius: 1rem;
 				text-align: center;
-				font-size: 1.4rem;
 				font-family: Open Sans Arial, Helvetica, sans-serif;
-				background-color: #a4c7d8;
+				background-color: rgba(255, 255, 255, 0.3);
 			}
 
 			.cred{
-				color: rgb(25, 25, 85);
+				color: white;
 				font-size: 1.5rem;
 				font-family: Open Sans Arial, Helvetica, sans-serif;
+				font-weight: lighter;
 			}
+
 			
 
 			.border{
 				padding: 2rem 1rem;
 				width: 50%;
-				height: 80%;
-				border: 1px solid #bddfeb;
+				height: 90%;
 				box-shadow: 2rem rgb(54, 52, 52);
 				border-radius: 1rem;
-				background-color: #bddfeb;
+				background-color: #666;
 			}
 
 			.btn {
 				padding: 0.5rem;
-				width: 50%;
+				width: 25%;
 				height: 4rem;
-				background-color: #236B8E;
-				color: #FFFFFF;
+				background-color: rgba(255, 255, 255, 0.3);
 				font-size: 1.5rem;
 				font-style: inherit;
-				font-weight: bold;
-				border-radius: 1rem;
+				border-radius: 0.5rem;
 				cursor: pointer;
+				border: none;
+				color: white;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				margin: 4px 2px;
+				transition-duration: 0.4s;
 			}
 
 			.btn:hover{
-				background-color: #3881a5;
-				color: #FFFFFF;
+				background-color: #8f9091d2;
+				color: #333;
 			}
 
 			.textbox{
@@ -60,14 +70,13 @@
 
 			.word{
 				color: #FFFFFF;
-				font-style: inherit;
-				font-weight: bold;
+				font-weight: lighter;
+				font-size: 2rem;
 			}
 
 			.bottom{
-				color: #236B8E;
+				color: white;
 				font-style: inherit;
 				font-family: Open Sans Arial, Helvetica, sans-serif;
-				font-weight: bold;
 				font-size: 1rem;
 			}
