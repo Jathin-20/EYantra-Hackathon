@@ -1,7 +1,8 @@
 
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
-import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 
 function App() {
@@ -16,15 +17,40 @@ function App() {
     })
 
   }, [])
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>React + Flask Tutorial</p>
-        <div>{getMessage.status === 200 ? 
-          <h3>{getMessage.data.message}</h3>
-          :
-          <h3>LOADING</h3>}</div>
+
+
+       <BrowserRouter>
+          <div>
+            <Link className="App-link" to="/">Home</Link>
+            &nbsp;|&nbsp;
+            <Link className="App-link" to="/page2">Page2</Link>
+          </div>
+          <Switch>
+            <Route exact path="/">
+                <img src={logo} className="App-logo" alt="logo" />
+                <p>
+                  Edit <code>src/App.js</code> and save to reload.
+                </p>
+                <a
+                  className="App-link"
+                  href="https://reactjs.org"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Learn React
+                </a>
+                
+            </Route>
+            <Route path="/page2">
+                <p>This is page 2!</p>
+            </Route>
+          </Switch>
+        </BrowserRouter>
+
       </header>
     </div>
   );
