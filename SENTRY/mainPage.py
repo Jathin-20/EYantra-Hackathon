@@ -86,7 +86,7 @@ def user():
 			cursor.execute('INSERT INTO details VALUES (NULL, % s, % s, % s)', (namef,emailf,phonef, ))
 			mysql.connection.commit()
 			msg = 'You have successfully registered !'
-	return render_template( msg = msg)
+	return render_template('confirmed.html', msg = msg)
   
 
 if __name__ == "__main__":
