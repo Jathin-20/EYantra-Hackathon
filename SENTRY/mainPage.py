@@ -31,7 +31,8 @@ def login():
 			session['loggedin'] = True
 			session['id'] = account['id']
 			session['username'] = account['username']
-			msg = 'Logged in successfully !'
+			cursor.execute('SELECT username,email FROM accounts WHERE username = % s', (username, ))
+			msg = cursor.fetchone()
 			return render_template('form.html', msg = msg)
 		else:
 			msg = 'Incorrect username / password !'
@@ -73,20 +74,24 @@ def register():
 @app.route('/user', methods =['GET', 'POST']) #Form Route
 def user():
 	msg = ''
-	if request.method == 'POST' and 'namef' in request.form and 'emailf' in request.form and 'phonef' in request.form :
+	if request.method == 'POST'  and 'namef' in request.form and 'emailf' in request.form and 'phonef' in request.form and 'messagef' in request.form :
 		namef = request.form['namef']
 		emailf = request.form['emailf']
 		phonef = request.form['phonef']
+		messagef = request.form['messagef']
 		cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
-		cursor.execute('SELECT * FROM details WHERE namef = % s', (namef, ))
+		cursor.execute('SELECT * FROM details WHERE emailf = % s', (emailf, ))
 		account = cursor.fetchone()
 		if account:
 			msg = 'Account already exists !'
 		else:
-			cursor.execute('INSERT INTO details VALUES (NULL, % s, % s, % s)', (namef,emailf,phonef, ))
+			cursor.execute('INSERT INTO details VALUES (NULL, % s, % s, % s, % s)', (namef,emailf,phonef,messagef, ))
 			mysql.connection.commit()
-			msg = 'You have successfully registered !'
+			cursor.execute('SELECT * FROM details WHERE namef = % s', (namef, ))
+			msg = cursor.fetchone()
+			
 	return render_template('confirmed.html', msg = msg)
+
   
 
 if __name__ == "__main__":
