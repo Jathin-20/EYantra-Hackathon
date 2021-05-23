@@ -1,6 +1,6 @@
 /*
 
-DREAM PULSE
+Code Reffered From
 
 https://templatemo.com/tm-536-dream-pulse
 
@@ -241,6 +241,7 @@ a {
 }
 
 .tm-contact-form-wrap {
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
